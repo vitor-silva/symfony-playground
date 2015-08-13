@@ -33,6 +33,7 @@ class LoadUserData implements FixtureInterface, ContainerAwareInterface, Ordered
         $user->setEmail('admin@test.com');
         $user->setPlainPassword('test');
         $user->setEnabled(true);
+        $user->setRoles(array('ROLE_ADMIN'));
 
         $manager->persist($user);
         $manager->flush();
